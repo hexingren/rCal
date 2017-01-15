@@ -1,0 +1,83 @@
+ul.row {
+	padding: 0;
+}
+
+ul.row li{
+	margin: 0 2px;
+	display: inline-block;
+	
+}
+
+li#hid {
+	visibility: hidden;
+}
+
+div {
+	margin: 30px 30px;
+	border: 2px solid #808080;
+	padding: 20px 15px; 
+	background: #000000;
+	height: 250px;
+	width: 190px;
+	border-radius: 25px;
+}
+
+input#disp {
+	border: 1px solid #808080;
+	padding: 0 5px;
+	text-align: right;
+	font-size: 30px;
+	height: 40px;
+	width: 175px;
+	border-radius: 5px;
+	background: #ffffff;
+}
+
+input#err {
+	border: 1px solid #808080;
+	padding: 0 5px;
+	text-align: right;
+	font-size: 15px;
+	height: 40px;
+	width: 175px;
+	border-radius: 5px;
+	background: #ffffff;
+}
+
+button[type="submit"]{
+	border: 1px solid #808080;
+	font-size: 20px;
+	height: 30px;
+	width: 40px;
+	border-radius: 10px;
+	background: #c0c0c0;
+}
+
+button[type="submit"]:hover{
+	background: #ffffff;
+	outline: none;
+}
+
+button[type="submit"].sign{
+	background: #808080;
+}
+
+button[type="submit"].sign:hover{
+	background: #ffffff;
+	outline: none;
+}
+
+
+pre {
+	color: #808080;
+}
+
+
+
+
+
+
+
+
+
+

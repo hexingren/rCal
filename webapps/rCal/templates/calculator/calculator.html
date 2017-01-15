@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> rCal </title>
+		<link href="../../static/calculator/calculator.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+	
+	<form action="/calculator" method="post"> 
+	<div>
+	{% if errmsg %}
+		<input readonly id="err" type="text" name="error" value="{{errmsg}}">
+	{% else %}
+		<input readonly id="disp" type="text" name="disp" value={{display}}>
+	{% endif %}
+	
+	<input type="hidden" name="val" value={{variable}}></input>
+	<input type="hidden" name="op" value={{operation}}></input>
+	<input type="hidden" name="flg" value={{flag}}></input>
+	<input type="hidden" name="pre" value={{preop}}></input>
+	<br>
+	
+	<ul class="row">
+		<li><button type="submit" name="num" value="7">7</button></li>
+		<li><button type="submit" name="num" value="8">8</button></li>
+		<li><button type="submit" name="num" value="9">9</button></li>
+		<li><button type="submit" name="opt" value="+" class="sign">&plus;</button></li>
+	</ul>
+	
+	<ul class="row">
+		<li><button type="submit" name="num" value="4">4</button></li>
+		<li><button type="submit" name="num" value="5">5</button></li>
+		<li><button type="submit" name="num" value="6">6</button></li>
+		<li><button type="submit" name="opt" value="-" class="sign">&minus;</button></li>
+	</ul>
+	
+	<ul class="row">
+		<li><button type="submit" name="num" value="1">1</button></li>
+		<li><button type="submit" name="num" value="2">2</button></li>
+		<li><button type="submit" name="num" value="3">3</button></li>
+		<li><button type="submit" name="opt" value="*" class="sign">&times;</button></li>
+	</ul>
+	
+	<ul class="row">
+	  	<li id="hid"><button type="submit" name="opt" value="C">C</button></li>
+		<li><button type="submit" name="num" value="0">0</button></li>
+		<li><button type="submit" name="opt" value="=" class="sign">&equals;</button></li>
+		<li><button type="submit" name="opt" value="/" class="sign">&divide;</button></li>
+	</ul>
+	<pre>          rCal</pre>
+	
+	</div>
+	{% csrf_token %}
+	</form>
+	
+	</body>
+</html>
